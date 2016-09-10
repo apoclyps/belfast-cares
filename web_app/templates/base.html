@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Belfast Cares | Giving back to the community!</title>
     <!-- master stylesheet -->
+    <link rel=manifest href="{% static 'manifest.json' %}">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- responsive stylesheet -->
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
@@ -292,6 +294,13 @@
 <!-- thm custom script -->
 <script src="{% static 'js/custom.js' %}"></script>
 
+<script>
+  if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+              .register('static/js/sw.js')
+              .then(function() { console.log("Service Worker Registered"); });
+  }
+</script>
 
 </body>
 </html>
