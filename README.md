@@ -1,4 +1,4 @@
-# belfast-cares getting-setup-guide
+# belfast-cares setup guide
 
 A Django app utilizing postgres & bootstrap, which can easily be deployed to Heroku.
 
